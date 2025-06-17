@@ -1,3 +1,56 @@
+
+Prueba técnica – CFT (Full Stack)
+
+Este proyecto está dividido en dos partes principales:
+
+- **Backend:** API REST construida en Python con FastAPI y MongoDB.
+- **Frontend:** Interfaz en React con Material UI, conectada al backend para realizar un CRUD completo.
+
+---
+
+🚀 Cómo iniciar el proyecto
+
+Requisitos
+
+- Python 3.10+
+- Node.js v18+
+- MongoDB Atlas o local
+- Docker (opcional)
+
+ Backend
+
+1. Instalar dependencias:
+
+cd backend
+python -m venv venv
+source venv/bin/activate  # o .\venv\Scripts\activate en Windows
+pip install -r requirements.txt
+
+
+Crear archivo .env con la URI de MongoDB:
+
+.env
+MONGO_URI=mongodb://root:6PaoFsr77wzl@57.129.59.106:27017/?authSource=admin
+
+Ejecutar el backend:
+uvicorn main:app --reload
+
+Frontend
+Instalar dependencias:
+cd frontend
+npm install
+
+Iniciar el frontend:
+npm run dev
+
+
+
+
+
+
+
+
+
 1. ¿Qué pasa si un usuario tiene un campo mal nombrado en la base de datos?
 	•	En MongoDB: se puede hacer un updateMany para renombrar el campo sin afectar el resto de datos. Algo como:
 
